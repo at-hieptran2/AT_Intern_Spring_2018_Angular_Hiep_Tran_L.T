@@ -16,3 +16,22 @@
   margin-bottom: 30px;
   font-weight: 600;
 }
+
+.detail-product .btn-detail {
+  font-weight: 600;
+}
+
+.detail-product .btn-detail:hover {
+  cursor: pointer;
+  color: #d50000;
+}
+
+.detail-product .title-product {
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.detail-product  .text-product {
+  color: #555;
+}
