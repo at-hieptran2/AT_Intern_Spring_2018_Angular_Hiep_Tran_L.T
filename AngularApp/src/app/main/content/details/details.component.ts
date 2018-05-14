@@ -1,5 +1,5 @@
-import { Component, Input } from '@angular/core';
-// import { post } from 'selenium-webdriver/http';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { PageInit } from '../../../article'
 
 @Component({
   selector: 'product-detail',
@@ -8,11 +8,12 @@ import { Component, Input } from '@angular/core';
 })
 
 export class ProductDetailComponent {
-  constructor() {
-  }
-  ngOnInit() {
-  }
-
-  @Input() post;
+  @Input() post: PageInit;
   @Input() isShowDetail;
+
+  @Output() isShowList = new EventEmitter<boolean>();
+
+  onBack() {
+    this.isShowList.emit(true);
+  }
 }

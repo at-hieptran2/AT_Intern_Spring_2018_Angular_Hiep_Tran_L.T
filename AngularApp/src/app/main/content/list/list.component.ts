@@ -1,9 +1,4 @@
-import { Component, Input, Output, EventEmitter  } from '@angular/core';
-export class PageInit {
-  id: number;
-  name: string;
-  text: string;
-}
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'product-list',
@@ -13,15 +8,15 @@ export class PageInit {
 
 export class ListComponent {
   title = 'Hiep';
-  
-  constructor() {}
-  ngOnInit() {
-  }
 
   @Input() posts;
   @Input() isShowDetail;
   @Output() selectedPost = new EventEmitter<object>(); 
-
+  
+  constructor() {
+    this.posts = [];
+  }
+  
   onSelect(data) {
     this.selectedPost.emit(data);
   }
